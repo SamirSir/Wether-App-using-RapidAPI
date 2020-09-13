@@ -10,6 +10,43 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+
+  <script>
+
+
+    // var load_dom = true;
+    // while (load_dom){
+    //     location.reload();
+    //     load_dom = false;
+    //   } 
+
+
+
+    // function reloadPage() {
+    //   var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
+    //   var now = Date.now();
+    //   var tenSec = 10 * 1000;
+    //   var plusTenSec = currentDocumentTimestamp + tenSec;
+
+    //   if (now > plusTenSec) {
+    //     location.reload();
+    //   } 
+    // }
+    // reloadPage();
+
+  
+  </script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid font-weight-bold " id="mainnav">
+        <a class="navbar-brand" href="/">Wether</a>
+        <a class="navbar-brand" href="/covid19/index">Corona Results</a>
+        <a class="navbar-brand" href="#">xyz</a>
+      </div>
+    </nav>
+
+  <%= yield %>
+
+</body>
 </html>

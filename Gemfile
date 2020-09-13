@@ -12,8 +12,15 @@ ruby '2.7.0'
 # custom gem
 gem 'bootstrap', '~> 4.3.1'
 gem 'excon'
+gem "select2-rails"
+
+gem 'chartkick'
+gem 'groupdate'
+gem 'active_median'
 
 # custom gem end
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record

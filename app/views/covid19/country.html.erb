@@ -1,0 +1,61 @@
+
+<div class="text-center font-weight-bold">
+    <%= link_to "Search Again", covid19_index_path %>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <div class="row font-weight-bold mr-1">
+                <div class="col-md-12 text-light bg-secondary">
+                    <h1><%= @per_country_response[0]['country'] %><h1>
+                </div>
+
+                <div class="col-md-6 p-1 text-light bg-primary">
+                    <h3> <%= @per_country_response[0]['confirmed'] %></h3>
+                    <p>Confirmed</p>
+                    <span></span>
+                </div>
+
+                <div class="col-md-6 p-1 text-light bg-success">
+                    <h3><%= @per_country_response[0]['recovered'] %></h3>
+                    <p>Recovered</p>
+                    <span></span>
+                </div>
+
+                <div class="col-md-6 p-1 text-light bg-warning">
+                    <h3><%= @per_country_response[0]['critical'] %></h3>
+                    <p>Critical</p>
+                    <span></span>
+                </div>
+
+                <div class="col-md-6 p-1 text-light bg-danger">
+                    <h3><%= @per_country_response[0]['deaths'] %></h3>
+                    <p>Death</p>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="row font-italic mr-1">
+                <div class="col-md-12 p-2 bg-info text-light">
+                    <span class="d-block ">Last Change: <mark class="bg-primary text-light"><%= @per_country_response[0]['lastChange'] %></mark> <span>
+                    <span class="d-block ">Last Update: <%= @per_country_response[0]['lastUpdate'] %><span>
+                    <span></span>
+                </div>
+
+                <div class="col-md-12 p-2 bg-secondary text-light">
+                    <span class="d-block ">Latitude: <%= @per_country_response[0]['latitude'] %></span>
+                    <span class="d-block ">Longitude: <%= @per_country_response[0]['longitude'] %></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 graph">
+            <div>
+                <%= column_chart @data, title: @per_country_response[0]['country'], ytitle: "No. of cases -->", xtitle: "Type of cases -->" %>
+            </div>
+        </div>
+
+    </div>
+</div>

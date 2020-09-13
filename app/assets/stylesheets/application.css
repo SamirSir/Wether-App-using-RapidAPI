@@ -13,9 +13,17 @@
 
  
  *= require bootstrap
+ *= require select2
 
  *= require_tree .
  *= require_self
  */
 
 
+ body{
+     background-color: #adf7e1;
+ }
+
+ #mainnav a:active{
+     color: red;
+ }
